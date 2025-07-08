@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake,Water,Gun</title>
+</head>
+
+<body>
+    <script>
+
+        let game = true;
+        while (game) {
+            let user = prompt("Enter your choice: S for Snake, W for Water, or G for Gun").toLowerCase();
+            let choices = ["s", "w", "g"];
+            let pc = choices[Math.floor(Math.random() * choices.length)];
+            console.log("PC's choice:", pc);
+            if (user == pc) {
+                alert("Its a Tie!")
+            }
+            else if ((user == "s" && pc == "w") ||
+                (user == "w" && pc == "g") ||
+                (user == "g" && pc == "s")) {
+                alert("You Win!");
+            } else if ((user == "w" && pc == "s") ||
+                (user == "g" && pc == "w") ||
+                (user == "s" && pc == "g")) {
+                alert("You Lose!");
+            } else {
+                console.error("Invalid choice! Please choose Snake, Water, or Gun.");
+
+            }
+            game = confirm("Do you want to play again? (yes/no)");
+        }
+    </script>
+</body>
+
+</html>
