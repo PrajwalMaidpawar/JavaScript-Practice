@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+        .bulb {
+            width:100px;
+            height:150px;
+        }
+
+        .bulb_colour {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Bulb" class="bulb bulb_colour">
+
+    </div>
+    <script>
+        setInterval(async function() {
+            document.querySelector("#Bulb").classList.toggle("bulb_colour");
+        }, 500);
+    </script>
+</body>
+
+</html>
