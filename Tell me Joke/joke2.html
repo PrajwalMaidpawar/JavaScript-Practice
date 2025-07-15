@@ -5,10 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tell me a Joke</title>
-
+    <style>
+        .joke {
+            width: 70vw;
+            font-family: Arial, sans-serif;
+            font-size: 50px;
+            background-color: aquamarine;
+            color: #333;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="joke">
+        This is a Joke
+    </div>
     <script>
         let joke = [
             "Why don't scientists trust atoms? Because they make up everything!",
@@ -77,7 +90,8 @@
             "What’s a vampire’s favorite fruit? A blood orange."
         ];
         let select = joke[Math.floor(Math.random() * joke.length)];
-        jokes = alert(select);
+        jokes = document.querySelector(".joke").innerText = select;
+        
     </script>
 </body>
 
