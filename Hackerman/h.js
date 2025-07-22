@@ -30,7 +30,7 @@ const sleep = async (second) => {
 }
 
 const hack = async(message) => {
-    await sleep(0.5);
+    await sleep(0.3);
     const text = document.getElementById("messages");
     text.innerHTML = text.innerHTML + message + "<br>";
 }
