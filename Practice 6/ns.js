@@ -1,5 +1,6 @@
 const noteInput = document.getElementById("noteInput");
 const addNoteBtn = document.getElementById("addNoteBtn");
+const showNotesBtn = document.getElementById("showNotesBtn");
 const deleteAllBtn = document.getElementById("deleteAllBtn");
 const notesContainer = document.getElementById("notesContainer");
 
@@ -40,6 +41,10 @@ addNoteBtn.addEventListener("click", () => {
   saveNotes(notes);
 
   noteInput.value = "";
+  renderNotes();
+});
+
+showNotesBtn.addEventListener("click", () => {
   renderNotes();
 });
 
