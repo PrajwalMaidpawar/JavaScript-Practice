@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futuristic Alarm Clock</title>
+  <link rel="stylesheet" href="a.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container glass-neon">
+    <div class="clock">
+      <h1 id="time">12:00 AM</h1>
+      <div class="selector">
+        <input type="time" id="alarmTime" />
+      </div>
+      <div class="buttons">
+        <button class="btn set">Set Alarm</button>
+        <button class="btn cancel">Cancel Alarm</button>
+      </div>
+      <div class="ripple"></div>
+    </div>
+  </div>
+  <script>
+    setInterval(() => {
+      const now = new Date()
+      let h = now.getHours()
+      let m = now.getMinutes()
+      let suffix = h >= 12 ? "PM" : "AM"
+      h = h % 12 || 12
+      m = m < 10 ? "0" + m : m
+      document.getElementById("time").textContent = `${h}:${m} ${suffix}`
+    }, 1000)
+  </script>
+</body>
+</html>
